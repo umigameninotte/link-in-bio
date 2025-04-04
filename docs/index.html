@@ -23,21 +23,21 @@
       touch-action: none;
     }
 
-   .container {
-  position: absolute;
-  top: 9%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  max-width: 90vw;
-  padding: 0 1rem;
-}
+    .container {
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      max-width: 90vw;
+      padding: 0 1rem;
+    }
 
-/* スマホ向けの調整（画面幅600px以下） */
-@media screen and (max-width: 600px) {
-  .container {
-    top: 12%; /* ← スマホだけ上の余白を広めに調整！ */
-  }
+    @media screen and (max-width: 600px) {
+      .container {
+        top: 12%; /* スマホはちょっと下げる */
+      }
+    }
 
     h1 {
       font-size: 2rem;
@@ -55,7 +55,7 @@
       color: #ccc;
       line-height: 1.2;
       margin-top: 0.3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2rem; /* メールとリンクの間広めに */
     }
 
     .links {
