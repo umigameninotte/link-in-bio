@@ -18,51 +18,46 @@
       color: #fff;
       margin: 0;
       padding: 0;
-      min-height: 100vh;
+      height: 100vh;
       overflow: hidden;
       touch-action: none;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
+    .container {
+      text-align: center;
+      padding: 1rem;
+      max-width: 90vw;
+      transform: scale(0.9); /* ← 全体を少し縮小して収める！ */
+    }
+
     h1 {
-      font-size: 2.2rem;
+      font-size: 1.8rem; /* ← 少し小さめに */
       margin-bottom: 0.5rem;
       margin-top: 0;
-      text-align: center;
-      line-height: 1.4;
+      line-height: 1.2;
     }
 
     p {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
       color: #ccc;
-      text-decoration: none;
-      word-wrap: break-word;
-      overflow-wrap: anywhere;
-      margin: 0 0 2rem;
-      line-height: 1.4;
-      text-align: center;
+      margin: 0 0 1.5rem;
+      line-height: 1.2;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      max-width: 90vw;
-      width: 100%;
+      gap: 0.7rem;
     }
 
     .links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.1rem;
-      text-align: center;
+      font-size: 0.95rem;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     .links a:hover,
@@ -71,53 +66,45 @@
     }
 
     .dot {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .dot img {
-      width: 64px;
+      width: 48px;
       height: auto;
     }
   </style>
 
   <script>
-    document.addEventListener('touchmove', function (event) {
-      event.preventDefault();
-    }, { passive: false });
-
-    document.addEventListener('gesturestart', function (e) {
-      e.preventDefault();
-    });
-    document.addEventListener('gesturechange', function (e) {
-      e.preventDefault();
-    });
-    document.addEventListener('gestureend', function (e) {
-      e.preventDefault();
-    });
+    document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
+    document.addEventListener('gesturechange', function (e) { e.preventDefault(); });
+    document.addEventListener('gestureend', function (e) { e.preventDefault(); });
   </script>
 </head>
 <body>
-  <h1>
-    Sakura<br>
-    Umiyoshi
-  </h1>
-  <p>
-    umigameninotte<br>
-    @gmail.com
-  </p>
+  <div class="container">
+    <h1>
+      Sakura<br>
+      Umiyoshi
+    </h1>
+    <p>
+      umigameninotte<br>
+      @gmail.com
+    </p>
 
-  <div class="links">
-    <a href="https://www.tumblr.com/umigameninotte" target="_blank">Tumblr</a>
-    <a href="https://www.instagram.com/umigameninotte/" target="_blank">Instagram</a>
-    <a href="https://bsky.app/profile/umigameninotte.bsky.social" target="_blank">Bluesky</a>
-    <a href="https://www.tiktok.com/@umigameninotte" target="_blank">TikTok</a>
-  </div>
+    <div class="links">
+      <a href="https://www.tumblr.com/umigameninotte" target="_blank">Tumblr</a>
+      <a href="https://www.instagram.com/umigameninotte/" target="_blank">Instagram</a>
+      <a href="https://bsky.app/profile/umigameninotte.bsky.social" target="_blank">Bluesky</a>
+      <a href="https://www.tiktok.com/@umigameninotte" target="_blank">TikTok</a>
+    </div>
 
-  <!-- ↓ ドット絵入れたい場合はここに貼る -->
-  <!--
-  <div class="dot">
-    <img src="my-dot-art.png" alt="My pixel art">
+    <!-- ↓ ドット絵入れる場合ここ -->
+    <!--
+    <div class="dot">
+      <img src="my-dot-art.png" alt="My pixel art">
+    </div>
+    -->
   </div>
-  -->
 </body>
 </html>
