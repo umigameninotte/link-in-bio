@@ -21,42 +21,44 @@
       height: 100vh;
       overflow: hidden;
       touch-action: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
     .container {
+      position: absolute;
+      top: 12%; /* ← ここで上からの位置を調整（お好みで10〜20%に） */
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
-      padding: 1rem;
       max-width: 90vw;
-      transform: scale(0.9); /* ← 全体を少し縮小して収める！ */
+      padding: 0 1rem;
     }
 
     h1 {
-      font-size: 1.8rem; /* ← 少し小さめに */
-      margin-bottom: 0.5rem;
-      margin-top: 0;
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
       line-height: 1.2;
     }
 
     p {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: #ccc;
-      margin: 0 0 1.5rem;
+      margin: 0 0 2rem;
       line-height: 1.2;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
+      align-items: center;
+      gap: 1rem; /* ← 行間のスペース確保！ */
+      margin-top: 1rem;
     }
 
     .links a {
       color: #fff;
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
+      line-height: 1.4;
       white-space: nowrap;
     }
 
@@ -66,7 +68,7 @@
     }
 
     .dot {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     .dot img {
@@ -76,9 +78,9 @@
   </style>
 
   <script>
-    document.addEventListener('gesturestart', function (e) { e.preventDefault(); });
-    document.addEventListener('gesturechange', function (e) { e.preventDefault(); });
-    document.addEventListener('gestureend', function (e) { e.preventDefault(); });
+    document.addEventListener('gesturestart', e => e.preventDefault());
+    document.addEventListener('gesturechange', e => e.preventDefault());
+    document.addEventListener('gestureend', e => e.preventDefault());
   </script>
 </head>
 <body>
@@ -99,7 +101,6 @@
       <a href="https://www.tiktok.com/@umigameninotte" target="_blank">TikTok</a>
     </div>
 
-    <!-- ↓ ドット絵入れる場合ここ -->
     <!--
     <div class="dot">
       <img src="my-dot-art.png" alt="My pixel art">
