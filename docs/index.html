@@ -25,7 +25,7 @@
 
     .container {
       position: absolute;
-      top: 16%; 
+      top: 12%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
@@ -33,23 +33,30 @@
       padding: 0 1rem;
     }
 
-h1 {
-  font-size: 2rem;
-  margin: 0 0 0.2rem 0; /* ← ここの「0.2rem」がポイント！縮めました！ */
-  line-height: 1.2;
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+      line-height: 1.2;
     }
 
-p {
-  font-size: 0.85rem;
-  color: #ccc;
-  margin: 0 0 1.5rem; /* ← 下の余白も少し縮めた */
-  line-height: 1.2;
-}
+    h1 span.space {
+      display: block;
+      height: 0.3rem; /* SakuraとUmiyoshiの間 */
+    }
+
+    .email {
+      font-size: 0.85rem;
+      color: #ccc;
+      line-height: 1.2;
+      margin-top: 0.3rem; /* ← メアドの上マージン */
+      margin-bottom: 1.5rem;
+    }
+
     .links {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem; 
+      gap: 1rem;
       margin-top: 1rem;
     }
 
@@ -84,14 +91,15 @@ p {
 </head>
 <body>
   <div class="container">
-  <h1>
-  Sakura<br><span style="display: block; height: 0.3rem;"></span>
-  Umiyoshi
-　</h1>
-    <p>
-      umigameninotte<br>
-      @gmail.com
-    </p>
+    <h1>
+      Sakura<br><span class="space"></span>
+      Umiyoshi
+    </h1>
+
+    <div class="email">
+      <div>umigameninotte</div>
+      <div>@gmail.com</div>
+    </div>
 
     <div class="links">
       <a href="https://www.tumblr.com/umigameninotte" target="_blank">Tumblr</a>
