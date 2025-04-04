@@ -12,18 +12,16 @@
       src: url('Perfect_DOS_VGA_437.ttf') format('truetype');
     }
 
-    body {
+    html, body {
       font-family: 'PerfectDOS', monospace;
       background: #000;
       color: #fff;
       text-align: center;
       padding: 4rem 1rem;
-      line-height: 1.6;
-
-      /* ← ここからが画面完全固定のための追加設定！ */
-      overflow: hidden;
-      height: 100vh;
       margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      touch-action: none; 
     }
 
     h1 {
@@ -76,6 +74,24 @@
       height: auto;
     }
   </style>
+
+  <script>
+    document.addEventListener('touchmove', function (event) {
+      event.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('gesturestart', function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('gesturechange', function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('gestureend', function (e) {
+      e.preventDefault();
+    });
+  </script>
 </head>
 <body>
   <h1>
