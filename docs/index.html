@@ -18,7 +18,7 @@
       color: #fff;
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       overflow: hidden;
       touch-action: none;
       display: flex;
@@ -30,6 +30,7 @@
     h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
+      margin-top: 0;
       text-align: center;
       line-height: 1.4;
     }
@@ -51,15 +52,17 @@
       align-items: center;
       gap: 1rem;
       max-width: 90vw;
+      width: 100%;
     }
 
     .links a {
       color: #fff;
       text-decoration: none;
       font-size: 1.1rem;
-      transition: 0.2s ease;
       text-align: center;
       white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .links a:hover,
@@ -85,11 +88,9 @@
     document.addEventListener('gesturestart', function (e) {
       e.preventDefault();
     });
-
     document.addEventListener('gesturechange', function (e) {
       e.preventDefault();
     });
-
     document.addEventListener('gestureend', function (e) {
       e.preventDefault();
     });
@@ -112,7 +113,7 @@
     <a href="https://www.tiktok.com/@umigameninotte" target="_blank">TikTok</a>
   </div>
 
-  <!-- ↓ 準備中 -->
+  <!-- ↓ ドット絵入れたい場合はここに貼る -->
   <!--
   <div class="dot">
     <img src="my-dot-art.png" alt="My pixel art">
