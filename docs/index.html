@@ -9,28 +9,43 @@
   font-family: 'PerfectDOS';
   src: url('Perfect_DOS_VGA_437.ttf') format('truetype');
 }
-    body {
-      font-family: 'PerfectDOS', monospace;
-      background: #f4f4f4;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      margin-bottom: 0.5rem;
-    }
-    .avatar {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-    .links a {
-  color: #333;
+    @font-face {
+  font-family: 'PerfectDOS';
+  src: url('Perfect_DOS_VGA_437.ttf') format('truetype');
+}
+
+body {
+  font-family: 'PerfectDOS', monospace;
+  background: #000;         /* 背景：黒 */
+  color: #fff;              /* 通常文字：白 */
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ccc; /* メールアドレスは少しグレーで柔らかく */
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.links a {
+  color: #0ff; /* レトロ風のシアン */
   text-decoration: underline;
-  display: inline;
-  margin: 0 0.5rem;
-    }
-    .links a:hover {
-      background: #e0e0e0;
+  font-size: 1rem;
     }
   </style>
 </head>
